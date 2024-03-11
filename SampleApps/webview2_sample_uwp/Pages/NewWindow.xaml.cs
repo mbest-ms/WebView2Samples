@@ -66,7 +66,7 @@ namespace WebView2_UWP.Pages
             WebView2.Source = new Uri("http://appassets.html.example/new_window.html");
         }
 
-        private void WebView2_CoreWebView2Initialized(WebView2 sender, CoreWebView2InitializedEventArgs args)
+        private void WebView2_CoreWebView2Initialized(WebView2Standalone.Controls.WebView2 sender, WebView2Standalone.Controls.CoreWebView2InitializedEventArgs args)
         {
             sender.CoreWebView2.SetVirtualHostNameToFolderMapping("appassets.html.example", "html", CoreWebView2HostResourceAccessKind.Allow);
             sender.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
@@ -87,8 +87,8 @@ namespace WebView2_UWP.Pages
             {
                 var deferral = args.GetDeferral();
 
-                var webView = new WebView2();
-                webView.CoreWebView2Initialized += (WebView2 wv2, CoreWebView2InitializedEventArgs initArgs) =>
+                var webView = new WebView2Standalone.Controls.WebView2();
+                webView.CoreWebView2Initialized += (WebView2Standalone.Controls.WebView2 wv2, WebView2Standalone.Controls.CoreWebView2InitializedEventArgs initArgs) =>
                 {
                     string name = String.IsNullOrEmpty(args.Name) ?
                                   ("Tab " + (++_tabNameIndex).ToString()) : args.Name;

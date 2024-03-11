@@ -233,6 +233,10 @@
     <PackageReference Include="Microsoft.Web.WebView2">
       <Version>*-*</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Windows.UndockedDevKit">
+      <Version>10.0.23653.1003-ni-current-directshell-dev1</Version>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="WebView2_UWP_TemporaryKey.pfx" />
@@ -246,6 +250,11 @@
       <Project>{f3f9258a-413b-4bbb-8916-673628473958}</Project>
       <Name>WinRTAdapter</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WebView2Standalone">
+      <HintPath>$(PkgMicrosoft_Windows_UndockedDevKit)\ref\wv2\WebView2Standalone.winmd</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

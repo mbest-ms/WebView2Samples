@@ -2,9 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#pragma warning disable CS8305 //'Microsoft.UI.Xaml.Controls.WebView2' is for evaluation purposes only and is subject to change or removal in future updates.
-
-using Microsoft.UI.Xaml.Controls;
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Diagnostics;
@@ -13,6 +10,8 @@ using webview2_sample_uwp;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using WebView2Standalone.Controls;
+
 namespace WebView2_UWP.Pages
 {
     public sealed partial class Browser : BasePage
@@ -40,7 +39,7 @@ namespace WebView2_UWP.Pages
             }
             else
             {
-                App.Instance.UpdateAppTitle(sender.GetExtendedVersionString(false));
+                App.Instance.UpdateAppTitle(CoreWebView2Environment.GetAvailableBrowserVersionString());
 
                 WebView2.CoreWebView2.DownloadStarting += CoreWebView2_DownloadStarting;
                 WebView2.CoreWebView2.HistoryChanged += CoreWebView2_HistoryChanged;

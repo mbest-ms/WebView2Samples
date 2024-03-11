@@ -8,7 +8,7 @@ found in the LICENSE file.-->
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    xmlns:wv2controls="using:WebView2Standalone.Controls"
     xmlns:local="using:WebView2_UWP.Pages"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -75,7 +75,7 @@ found in the LICENSE file.-->
 
         </StackPanel>
 
-        <controls:WebView2 Grid.Column="1" x:Name="WebView2" />
+        <wv2controls:WebView2 Grid.Column="1" x:Name="WebView2" />
     </Grid>
 </local:BasePage>
 

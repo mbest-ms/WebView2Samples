@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 using AddHostObjectBridgeComponent;
-using Microsoft.UI.Xaml.Controls;
+using WebView2Standalone.Controls;
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Collections.Generic;

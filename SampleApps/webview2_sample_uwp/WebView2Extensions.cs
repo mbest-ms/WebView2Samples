@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-using Microsoft.UI.Xaml.Controls;
+using WebView2Standalone.Controls;
 using Microsoft.Web.WebView2.Core;
 using System.ComponentModel;
 using System.Diagnostics;
